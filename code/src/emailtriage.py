@@ -61,12 +61,13 @@ def process_attachments(folder_path, config):
 if __name__ == "__main__":
     # Path to your properties file and attachments folder
     properties_file = "emailtriage-config.properties"  # Path to your .properties file
-    attachments_folder = "emails_with-attachments-data"  # Folder with email attachments
+    attachments_folder = "emails-with-attachments-data"  # Folder with email attachments
 
     # Load properties
     config = load_properties(properties_file)
     if config is not None:
         # Process email attachments
+        print("attachments_folder-->"+attachments_folder)
         process_attachments(attachments_folder, config)
     else:
         print("Could not load properties. Exiting.")
